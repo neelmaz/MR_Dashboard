@@ -37,3 +37,6 @@ certs/
 *.xlsx
 *.pptx
 *.pdf
+
+# Explicit ignore for Arabic presentation file
+تقرير استطلاع رأي المتعاملين - يناير 2026 - وزارة الصحة ووقاية المجتمع.pptx
