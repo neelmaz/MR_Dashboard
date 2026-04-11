@@ -1,0 +1,81 @@
+﻿brand,model,trim,segment,fuel_type,transmission,engine_cc,power_bhp,torque_nm,sunroof,ADAS_level,infotainment_size_inch,safety_rating,airbags,market,year,ex_showroom_price,discount_offer,promotion_type,competitor_model,competitor_price,positioning_score,quoted_price,dealer_name,city
+Nissan,Altima,Base,Sedan,Petrol,Automatic,2000,150,200,No,0,7,4,2,India,2021,22500,500,Seasonal,Toyota Camry,24000,6,22000,Prime Nissan,Kolkata
+Nissan,Altima,XL,Sedan,Petrol,Automatic,2000,150,200,No,0,8,4,2,India,2021,24500,700,Dealer,Toyota Camry,24000,7,23800,Prime Nissan,Kolkata
+Nissan,Altima,XV,Sedan,Petrol,Automatic,2500,180,240,Yes,1,8,5,4,India,2022,26500,1000,Festival,Honda Accord,26000,8,25500,City Nissan,Delhi
+Nissan,Altima,Premium,Sedan,Petrol,Automatic,2500,180,240,Yes,1,9,5,4,India,2022,28500,1200,Festival,Honda Accord,26000,9,27200,City Nissan,Delhi
+Nissan,Kicks,XL,SUV,Petrol,Manual,1500,105,142,No,0,7,4,2,India,2021,16500,300,Seasonal,Hyundai Creta,17500,6,16000,Highway Nissan,Mumbai
+Nissan,Kicks,XV,SUV,Petrol,Manual,1500,105,142,No,0,8,4,2,India,2021,17500,400,Dealer,Hyundai Creta,17500,7,17000,Highway Nissan,Mumbai
+Nissan,Kicks,Premium,SUV,Petrol,Automatic,1500,105,142,Yes,1,8,5,4,India,2022,19500,600,Festival,Kia Seltos,18500,8,18800,Metro Nissan,Bangalore
+Nissan,Kicks,Turbo,SUV,Petrol,Manual,1300,154,254,Yes,1,8,5,4,India,2022,20500,800,Festival,Kia Seltos,18500,9,19800,Metro Nissan,Bangalore
+Nissan,X-Trail,Base,SUV,Petrol,Automatic,2000,142,200,No,1,8,5,4,India,2021,32000,1000,Seasonal,Hyundai Tucson,33000,7,31000,Prime Nissan,Kolkata
+Nissan,X-Trail,XL,SUV,Petrol,Automatic,2000,142,200,Yes,1,9,5,4,India,2021,34000,1200,Dealer,Hyundai Tucson,33000,8,33000,Prime Nissan,Kolkata
+Nissan,X-Trail,Premium,SUV,Hybrid,Automatic,2500,180,250,Yes,2,10,5,6,India,2022,38000,1500,Festival,Jeep Compass,36000,9,36500,City Nissan,Delhi
+Nissan,X-Trail,Hybrid+,SUV,Hybrid,Automatic,2500,180,250,Yes,2,12,5,6,India,2022,41000,1800,Festival,Jeep Compass,36000,10,39500,City Nissan,Delhi
+Nissan,Micra,Base,Hatchback,Petrol,Manual,1200,75,104,No,0,6,3,2,India,2021,8000,200,Seasonal,Maruti Swift,8500,5,7800,Highway Nissan,Mumbai
+Nissan,Micra,XL,Hatchback,Petrol,Manual,1200,75,104,No,0,7,3,2,India,2021,8500,250,Dealer,Maruti Swift,8500,6,8300,Highway Nissan,Mumbai
+Nissan,Micra,XV,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,7,4,2,India,2022,9000,300,Festival,Hyundai i20,9000,7,8800,Metro Nissan,Bangalore
+Nissan,Micra,Premium,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,8,4,2,India,2022,9500,350,Festival,Hyundai i20,9000,8,9200,Metro Nissan,Bangalore
+Nissan,Magnite,Base,SUV,Petrol,Manual,1000,72,96,No,0,7,4,2,India,2021,7000,150,Seasonal,Tata Punch,7500,6,6800,Prime Nissan,Kolkata
+Nissan,Magnite,XL,SUV,Petrol,Manual,1000,72,96,No,0,8,4,2,India,2021,7500,200,Dealer,Tata Punch,7500,7,7300,Prime Nissan,Kolkata
+Nissan,Magnite,XV,SUV,Petrol,Automatic,1000,100,160,Yes,1,8,4,2,India,2022,8500,300,Festival,Kia Sonet,9000,8,8200,City Nissan,Delhi
+Nissan,Magnite,Turbo,SUV,Petrol,Manual,1000,100,160,Yes,1,9,4,2,India,2022,9000,350,Festival,Kia Sonet,9000,9,8700,City Nissan,Delhi
+Nissan,Altima,Base,Sedan,Petrol,Automatic,2000,150,200,No,0,7,4,2,India,2021,22500,500,Seasonal,Camry,24000,6,22000,Prime Nissan,Kolkata
+Nissan,Altima,XL,Sedan,Petrol,Automatic,2000,150,200,No,0,8,4,2,India,2021,24500,700,Dealer,Camry,24000,7,23800,Prime Nissan,Kolkata
+Nissan,Altima,XV,Sedan,Petrol,Automatic,2500,180,240,Yes,1,8,5,4,India,2022,26500,1000,Festival,Accord,26000,8,25500,City Nissan,Delhi
+Nissan,Altima,Premium,Sedan,Petrol,Automatic,2500,180,240,Yes,1,9,5,4,India,2022,28500,1200,Festival,Accord,26000,9,27200,City Nissan,Delhi
+Nissan,Kicks,XL,SUV,Petrol,Manual,1500,105,142,No,0,7,4,2,India,2021,16500,300,Seasonal,Creta,17500,6,16000,Highway Nissan,Mumbai
+Nissan,Kicks,XV,SUV,Petrol,Manual,1500,105,142,No,0,8,4,2,India,2021,17500,400,Dealer,Creta,17500,7,17000,Highway Nissan,Mumbai
+Nissan,Kicks,Premium,SUV,Petrol,Automatic,1500,105,142,Yes,1,8,5,4,India,2022,19500,600,Festival,Seltos,18500,8,18800,Metro Nissan,Bangalore
+Nissan,Kicks,Turbo,SUV,Petrol,Manual,1300,154,254,Yes,1,8,5,4,India,2022,20500,800,Festival,Seltos,18500,9,19800,Metro Nissan,Bangalore
+Nissan,X-Trail,Base,SUV,Petrol,Automatic,2000,142,200,No,1,8,5,4,India,2021,32000,1000,Seasonal,Tucson,33000,7,31000,Prime Nissan,Kolkata
+Nissan,X-Trail,XL,SUV,Petrol,Automatic,2000,142,200,Yes,1,9,5,4,India,2021,34000,1200,Dealer,Tucson,33000,8,33000,Prime Nissan,Kolkata
+Nissan,X-Trail,Premium,SUV,Hybrid,Automatic,2500,180,250,Yes,2,10,5,6,India,2022,38000,1500,Festival,Compass,36000,9,36500,City Nissan,Delhi
+Nissan,X-Trail,Hybrid+,SUV,Hybrid,Automatic,2500,180,250,Yes,2,12,5,6,India,2022,41000,1800,Festival,Compass,36000,10,39500,City Nissan,Delhi
+Nissan,Micra,Base,Hatchback,Petrol,Manual,1200,75,104,No,0,6,3,2,India,2021,8000,200,Seasonal,Swift,8500,5,7800,Highway Nissan,Mumbai
+Nissan,Micra,XL,Hatchback,Petrol,Manual,1200,75,104,No,0,7,3,2,India,2021,8500,250,Dealer,Swift,8500,6,8300,Highway Nissan,Mumbai
+Nissan,Micra,XV,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,7,4,2,India,2022,9000,300,Festival,i20,9000,7,8800,Metro Nissan,Bangalore
+Nissan,Micra,Premium,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,8,4,2,India,2022,9500,350,Festival,i20,9000,8,9200,Metro Nissan,Bangalore
+Nissan,Magnite,Base,SUV,Petrol,Manual,1000,72,96,No,0,7,4,2,India,2021,7000,150,Seasonal,Punch,7500,6,6800,Prime Nissan,Kolkata
+Nissan,Magnite,XL,SUV,Petrol,Manual,1000,72,96,No,0,8,4,2,India,2021,7500,200,Dealer,Punch,7500,7,7300,Prime Nissan,Kolkata
+Nissan,Magnite,XV,SUV,Petrol,Automatic,1000,100,160,Yes,1,8,4,2,India,2022,8500,300,Festival,Sonet,9000,8,8200,City Nissan,Delhi
+Nissan,Magnite,Turbo,SUV,Petrol,Manual,1000,100,160,Yes,1,9,4,2,India,2022,9000,350,Festival,Sonet,9000,9,8700,City Nissan,Delhi
+Nissan,Altima,Base,Sedan,Petrol,Automatic,2000,150,200,No,0,7,4,2,UAE,2020,21000,400,Seasonal,Camry,23000,6,20500,Nissan Al Masaood,Abu Dhabi
+Nissan,Altima,XL,Sedan,Petrol,Automatic,2000,150,200,No,0,8,4,2,UAE,2020,23000,600,Dealer,Camry,23000,7,22500,Nissan Al Masaood,Abu Dhabi
+Nissan,Altima,XV,Sedan,Petrol,Automatic,2500,180,240,Yes,1,8,5,4,UAE,2021,25500,900,Festival,Accord,25000,8,24800,Nissan Arabian Motors,Dubai
+Nissan,Altima,Premium,Sedan,Petrol,Automatic,2500,180,240,Yes,1,9,5,4,UAE,2021,27500,1100,Festival,Accord,25000,9,26500,Nissan Arabian Motors,Dubai
+Nissan,Altima,Base,Sedan,Hybrid,Automatic,2500,160,220,No,1,8,5,4,Thailand,2022,24000,700,Seasonal,Camry Hybrid,26000,7,23200,Nissan Siam,Bangkok
+Nissan,Altima,XL,Sedan,Hybrid,Automatic,2500,160,220,Yes,1,9,5,4,Thailand,2022,26000,900,Dealer,Camry Hybrid,26000,8,25200,Nissan Siam,Bangkok
+Nissan,Altima,XV,Sedan,Hybrid,Automatic,2500,180,240,Yes,2,10,5,6,Thailand,2023,28000,1200,Festival,Accord Hybrid,27000,9,27000,Nissan Siam,Bangkok
+Nissan,Altima,Premium,Sedan,Hybrid,Automatic,2500,180,240,Yes,2,12,5,6,Thailand,2023,30000,1500,Festival,Accord Hybrid,27000,10,28800,Nissan Siam,Bangkok
+Nissan,Kicks,XL,SUV,Petrol,Manual,1500,105,142,No,0,7,4,2,UAE,2020,15000,200,Seasonal,Creta,16500,6,14500,Nissan Arabian Motors,Dubai
+Nissan,Kicks,XV,SUV,Petrol,Manual,1500,105,142,No,0,8,4,2,UAE,2020,16500,300,Dealer,Creta,16500,7,16000,Nissan Arabian Motors,Dubai
+Nissan,Kicks,Premium,SUV,Petrol,Automatic,1500,105,142,Yes,1,8,5,4,UAE,2021,18500,500,Festival,Seltos,17500,8,17800,Nissan Arabian Motors,Dubai
+Nissan,Kicks,Turbo,SUV,Petrol,Manual,1300,154,254,Yes,1,8,5,4,UAE,2021,19500,700,Festival,Seltos,17500,9,18800,Nissan Arabian Motors,Dubai
+Nissan,Kicks,XL,SUV,Petrol,Manual,1500,105,142,No,0,7,4,2,Mexico,2022,14000,150,Seasonal,Kia Soul,15000,6,13500,Nissan Mexicana,Monterrey
+Nissan,Kicks,XV,SUV,Petrol,Manual,1500,105,142,No,0,8,4,2,Mexico,2022,15500,250,Dealer,Kia Soul,15000,7,15000,Nissan Mexicana,Monterrey
+Nissan,Kicks,Premium,SUV,Petrol,Automatic,1500,105,142,Yes,1,8,5,4,Mexico,2023,17500,400,Festival,Hyundai Venue,16000,8,16800,Nissan Mexicana,Monterrey
+Nissan,Kicks,Turbo,SUV,Petrol,Manual,1300,154,254,Yes,1,9,5,4,Mexico,2023,18500,600,Festival,Hyundai Venue,16000,9,17800,Nissan Mexicana,Monterrey
+Nissan,X-Trail,Base,SUV,Petrol,Automatic,2000,142,200,No,1,8,5,4,UAE,2020,30000,800,Seasonal,Tucson,32000,7,29200,Nissan Arabian Motors,Dubai
+Nissan,X-Trail,XL,SUV,Petrol,Automatic,2000,142,200,Yes,1,9,5,4,UAE,2020,32000,1000,Dealer,Tucson,32000,8,31000,Nissan Arabian Motors,Dubai
+Nissan,X-Trail,Premium,SUV,Hybrid,Automatic,2500,180,250,Yes,2,10,5,6,UAE,2021,36000,1300,Festival,Compass,35000,9,34800,Nissan Arabian Motors,Dubai
+Nissan,X-Trail,Hybrid+,SUV,Hybrid,Automatic,2500,180,250,Yes,2,12,5,6,UAE,2021,39000,1600,Festival,Compass,35000,10,37500,Nissan Arabian Motors,Dubai
+Nissan,X-Trail,Base,SUV,Petrol,Automatic,2000,142,200,No,1,8,5,4,Thailand,2022,31000,900,Seasonal,Tucson,33000,7,30000,Nissan Siam,Bangkok
+Nissan,X-Trail,XL,SUV,Petrol,Automatic,2000,142,200,Yes,1,9,5,4,Thailand,2022,33000,1100,Dealer,Tucson,33000,8,31800,Nissan Siam,Bangkok
+Nissan,X-Trail,Premium,SUV,Hybrid,Automatic,2500,180,250,Yes,2,10,5,6,Thailand,2023,37000,1400,Festival,Compass,36000,9,35500,Nissan Siam,Bangkok
+Nissan,X-Trail,Hybrid+,SUV,Hybrid,Automatic,2500,180,250,Yes,2,12,5,6,Thailand,2023,40000,1700,Festival,Compass,36000,10,38500,Nissan Siam,Bangkok
+Nissan,Micra,Base,Hatchback,Petrol,Manual,1200,75,104,No,0,6,3,2,UAE,2020,7000,150,Seasonal,Swift,8000,5,6800,Nissan Arabian Motors,Dubai
+Nissan,Micra,XL,Hatchback,Petrol,Manual,1200,75,104,No,0,7,3,2,UAE,2020,7500,200,Dealer,Swift,8000,6,7300,Nissan Arabian Motors,Dubai
+Nissan,Micra,XV,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,7,4,2,UAE,2021,8000,250,Festival,i20,8500,7,7800,Nissan Arabian Motors,Dubai
+Nissan,Micra,Premium,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,8,4,2,UAE,2021,8500,300,Festival,i20,8500,8,8300,Nissan Arabian Motors,Dubai
+Nissan,Micra,Base,Hatchback,Petrol,Manual,1200,75,104,No,0,6,3,2,Mexico,2022,6500,120,Seasonal,Chevy Spark,7000,5,6300,Nissan Mexicana,Monterrey
+Nissan,Micra,XL,Hatchback,Petrol,Manual,1200,75,104,No,0,7,3,2,Mexico,2022,7000,150,Dealer,Chevy Spark,7000,6,6800,Nissan Mexicana,Monterrey
+Nissan,Micra,XV,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,7,4,2,Mexico,2023,7500,200,Festival,Kia Rio,7500,7,7300,Nissan Mexicana,Monterrey
+Nissan,Micra,Premium,Hatchback,Petrol,Automatic,1200,75,104,Yes,1,8,4,2,Mexico,2023,8000,250,Festival,Kia Rio,7500,8,7800,Nissan Mexicana,Monterrey
+Nissan,Magnite,Base,SUV,Petrol,Manual,1000,72,96,No,0,7,4,2,UAE,2020,6500,100,Seasonal,Punch,7000,6,6300,Nissan Arabian Motors,Dubai
+Nissan,Magnite,XL,SUV,Petrol,Manual,1000,72,96,No,0,8,4,2,UAE,2020,7000,150,Dealer,Punch,7000,7,6800,Nissan Arabian Motors,Dubai
+Nissan,Magnite,XV,SUV,Petrol,Automatic,1000,100,160,Yes,1,8,4,2,UAE,2021,8000,200,Festival,Sonet,8500,8,7800,Nissan Arabian Motors,Dubai
+Nissan,Magnite,Turbo,SUV,Petrol,Manual,1000,100,160,Yes,1,9,4,2,UAE,2021,8500,250,Festival,Sonet,8500,9,8300,Nissan Arabian Motors,Dubai
+Nissan,Magnite,Base,SUV,Petrol,Manual,1000,72,96,No,0,7,4,2,Thailand,2022,6800,120,Seasonal,Punch,7200,6,6600,Nissan Siam,Bangkok
+Nissan,Magnite,XL,SUV,Petrol,Manual,1000,72,96,No,0,8,4,2,Thailand,2022,7200,150,Dealer,Punch,7200,7,7000,Nissan Siam,Bangkok
+Nissan,Magnite,XV,SUV,Petrol,Automatic,1000,100,160,Yes,1,8,4,2,Thailand,2023,8200,200,Festival,Sonet,8500,8,8000,Nissan Siam,Bangkok
+Nissan,Magnite,Turbo,SUV,Petrol,Manual,1000,100,160,Yes,1,9,4,2,Thailand,2023,8700,250,Festival,Sonet,8500,9,8500,Nissan Siam,Bangkok

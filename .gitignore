@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+*.env
+*.sqlite3
+*.db
+
+# Pytest
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local certificates and keys
+certs/
+*.pem
+*.key
+*.crt
+
+# Logs
+*.log
+
+# Office and non-source files
+*.docx
+*.xlsx
+*.pptx
+*.pdf

@@ -1,0 +1,25 @@
+Running instructions:
+
+#Run like this: .venv/bin/python -m streamlit run dashboard.py
+
+#While running the app.py for launching the API, run the following commands in the terminal:
+cd "/Users/neelanjanmazumder/Library/CloudStorage/OneDrive-Personal/Feedback_MR"
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m uvicorn app:app --reload
+
+
+
+chmod +x start.sh
+./start.sh
+
+cd "/Users/neelanjanmazumder/Library/CloudStorage/OneDrive-Personal/Feedback_MR"
+chmod +x https_start.sh
+./https_start.sh
+
+# One-step public sharing with ngrok
+chmod +x ngrok_start.sh
+./ngrok_start.sh
+
+# If you want a stable public tunnel, configure your ngrok auth token first:
+# ngrok config add-authtoken YOUR_AUTHTOKEN
+

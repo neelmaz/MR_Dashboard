@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nissan Automotive Benchmark Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Nissan Automotive Intelligence</h1>
+      </div>
+      <section class="sidebar-section">
+        <h2>Navigation</h2>
+        <div class="nav-buttons">
+          <button data-page="dashboard" class="active">Dashboard</button>
+          <button data-page="model-comparison">Model Comparison</button>
+          <button data-page="pricing-trends">Pricing Trends</button>
+          <button data-page="feature-benchmarking">Feature Benchmarking</button>
+          <button data-page="dealer-quotations">Dealer Quotations</button>
+          <button data-page="settings">Settings</button>
+        </div>
+      </section>
+      <section class="sidebar-section">
+        <h2>Filters</h2>
+        <label>
+          Market
+          <select id="marketSelect"></select>
+        </label>
+        <label>
+          Model
+          <select id="modelSelect"></select>
+        </label>
+        <label>
+          Year
+          <select id="yearSelect"></select>
+        </label>
+        <button id="refreshButton" type="button">Refresh</button>
+      </section>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div class="topbar-heading">
+          <div>
+            <h2>Automotive Benchmark Dashboard</h2>
+            <p class="subtitle">Unified insights into Nissan pricing, features, and market positioning.</p>
+          </div>
+          <div class="user-badge">User: DZ1</div>
+        </div>
+        <div class="topbar-meta">
+          <span class="meta-pill">Realtime insights</span>
+          <span class="meta-pill">Secure HTTPS</span>
+          <span class="meta-pill">ngrok-ready</span>
+        </div>
+      </header>
+
+      <section id="dashboard" class="page active">
+        <div class="kpi-row" id="kpiRow"></div>
+
+        <div class="chart-card">
+          <h3>Historical Pricing Trends</h3>
+          <div id="priceTrendChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Feature Benchmarking</h3>
+          <div id="featureChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Competitor Positioning Score</h3>
+          <div id="positioningChart" class="chart"></div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Average Quoted Price by Model</h3>
+          <div id="quoteChart" class="chart"></div>
+        </div>
+      </section>
+
+      <section id="model-comparison" class="page">
+        <div class="section-title">Model Comparison</div>
+        <div class="table-card" id="comparisonTable"></div>
+      </section>
+
+      <section id="pricing-trends" class="page">
+        <div class="section-title">Pricing Trends</div>
+        <div class="chart-card">
+          <div id="pricingTrendChart" class="chart"></div>
+        </div>
+      </section>
+
+      <section id="feature-benchmarking" class="page">
+        <div class="section-title">Feature Benchmarking</div>
+        <div class="chart-card">
+          <div id="featureTrendChart" class="chart"></div>
+        </div>
+      </section>
+
+      <section id="dealer-quotations" class="page">
+        <div class="section-title">Dealer Quotations</div>
+        <div class="chart-card">
+          <div id="dealerQuoteChart" class="chart"></div>
+        </div>
+      </section>
+
+      <section id="settings" class="page">
+        <div class="section-title">Settings</div>
+        <div class="panel">
+          <p>Use the sidebar filters to customize the data view.</p>
+          <p>This web app provides API endpoints at <code>/api/filters</code>, <code>/api/dashboard</code>, and <code>/api/data</code>.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      market: 'All',
+      model: 'All',
+      year: 'All',
+      page: 'dashboard',
+    };
+
+    const pages = document.querySelectorAll('.nav-buttons button');
+    const pageSections = document.querySelectorAll('.page');
+    const marketSelect = document.getElementById('marketSelect');
+    const modelSelect = document.getElementById('modelSelect');
+    const yearSelect = document.getElementById('yearSelect');
+    const refreshButton = document.getElementById('refreshButton');
+    const kpiRow = document.getElementById('kpiRow');
+    const comparisonTable = document.getElementById('comparisonTable');
+
+    pages.forEach((button) => {
+      button.addEventListener('click', () => {
+        pages.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        state.page = button.dataset.page;
+        updatePages();
+      });
+    });
+
+    function updatePages() {
+      pageSections.forEach((section) => {
+        section.classList.toggle('active', section.id === state.page);
+      });
+    }
+
+    async function fetchFilters() {
+      const response = await fetch('/api/filters');
+      const data = await response.json();
+      fillSelect(marketSelect, data.markets);
+      fillSelect(modelSelect, data.models);
+      fillSelect(yearSelect, data.years);
+    }
+
+    function fillSelect(select, values) {
+      select.innerHTML = '';
+      values.forEach((value) => {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        select.appendChild(option);
+      });
+    }
+
+    async function fetchDashboard() {
+      const search = new URLSearchParams();
+      search.set('market', state.market);
+      search.set('model', state.model);
+      if (state.year !== 'All') {
+        search.set('year', state.year);
+      }
+      const response = await fetch(`/api/dashboard?${search.toString()}`);
+      return response.json();
+    }
+
+    function renderKpis(kpis) {
+      kpiRow.innerHTML = '';
+      const cards = [
+        { label: 'Unique Models', value: kpis.unique_models },
+        { label: 'Unique Trims', value: kpis.unique_trims },
+        { label: 'Avg Ex-Showroom Price', value: `$${kpis.avg_ex_showroom_price.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+        { label: 'Avg Discount', value: `$${kpis.avg_discount.toLocaleString(undefined, { maximumFractionDigits: 0 })}` },
+      ];
+      cards.forEach((card) => {
+        const element = document.createElement('div');
+        element.className = 'kpi-card';
+        element.innerHTML = `<div class="kpi-value">${card.value}</div><div class="kpi-label">${card.label}</div>`;
+        kpiRow.appendChild(element);
+      });
+    }
+
+    function renderChart(containerId, traces, layout) {
+      const container = document.getElementById(containerId);
+      Plotly.newPlot(container, traces, layout, { responsive: true });
+    }
+
+    function renderTable(container, rows) {
+      if (!rows.length) {
+        container.innerHTML = '<p>No data available for the selected filters.</p>';
+        return;
+      }
+      const headers = Object.keys(rows[0]);
+      const table = document.createElement('table');
+      const thead = document.createElement('thead');
+      const headerRow = document.createElement('tr');
+      headers.forEach((heading) => {
+        const th = document.createElement('th');
+        th.textContent = heading;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      rows.forEach((row) => {
+        const tr = document.createElement('tr');
+        headers.forEach((key) => {
+          const td = document.createElement('td');
+          td.textContent = row[key];
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      container.innerHTML = '';
+      container.appendChild(table);
+    }
+
+    async function refreshDashboard() {
+      state.market = marketSelect.value;
+      state.model = modelSelect.value;
+      state.year = yearSelect.value;
+
+      const data = await fetchDashboard();
+      renderKpis(data.kpis);
+
+      const priceTraces = data.price_trend.map((item) => ({
+        x: item.years,
+        y: item.prices,
+        mode: 'lines+markers',
+        name: item.name,
+      }));
+      renderChart('priceTrendChart', priceTraces, {
+        title: 'Yearly Price Movement by Model',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Mean Ex-Showroom Price' },
+      });
+      renderChart('pricingTrendChart', priceTraces, {
+        title: 'Pricing Trends',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Price (USD)' },
+      });
+
+      const featureTraces = [
+        {
+          x: data.feature_data.map((row) => row.model),
+          y: data.feature_data.map((row) => row.infotainment_size_inch),
+          type: 'bar',
+          name: 'Infotainment Size',
+        },
+      ];
+      renderChart('featureChart', featureTraces, {
+        title: 'Infotainment Size Comparison',
+        xaxis: { title: 'Model' },
+        yaxis: { title: 'Inches' },
+      });
+      renderChart('featureTrendChart', [
+        {
+          x: data.feature_data.map((row) => row.model),
+          y: data.feature_data.map((row) => row.AADAS_level || row.ADAS_level || 0),
+          name: 'ADAS Level',
+          type: 'bar',
+        },
+        {
+          x: data.feature_data.map((row) => row.model),
+          y: data.feature_data.map((row) => row.airbags),
+          name: 'Airbags',
+          type: 'bar',
+        },
+        {
+          x: data.feature_data.map((row) => row.model),
+          y: data.feature_data.map((row) => row.safety_rating),
+          name: 'Safety Rating',
+          type: 'bar',
+        },
+      ], {
+        title: 'Safety and ADAS Benchmark',
+        barmode: 'group',
+        xaxis: { title: 'Model' },
+        yaxis: { title: 'Score / Count' },
+      });
+
+      renderChart('positioningChart', [
+        {
+          x: data.positioning.map((row) => row.model),
+          y: data.positioning.map((row) => row.positioning_score),
+          type: 'bar',
+          marker: { color: '#2a6dfb' },
+        },
+      ], {
+        title: 'Positioning Score by Model',
+        xaxis: { title: 'Model' },
+        yaxis: { title: 'Positioning Score' },
+      });
+
+      renderChart('quoteChart', [
+        {
+          x: data.quote_data.map((row) => row.model),
+          y: data.quote_data.map((row) => row.quoted_price),
+          type: 'bar',
+          marker: { color: '#3cb44b' },
+        },
+      ], {
+        title: 'Average Quoted Price by Model',
+        xaxis: { title: 'Model' },
+        yaxis: { title: 'Quoted Price' },
+      });
+
+      renderTable(comparisonTable, data.comparison.slice(0, 25));
+    }
+
+    marketSelect.addEventListener('change', () => {
+      state.market = marketSelect.value;
+    });
+    modelSelect.addEventListener('change', () => {
+      state.model = modelSelect.value;
+    });
+    yearSelect.addEventListener('change', () => {
+      state.year = yearSelect.value;
+    });
+    refreshButton.addEventListener('click', refreshDashboard);
+
+    fetchFilters().then(refreshDashboard);
+  </script>
+</body>
+</html>
