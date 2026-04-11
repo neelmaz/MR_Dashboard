@@ -64,3 +64,14 @@ ngrok config add-authtoken YOUR_AUTHTOKEN
 This script ensures the local HTTPS server is running and then launches an ngrok tunnel to it.
 
 Then share the `https://...ngrok.io` URL.
+
+## Deploy from GitHub to Render
+
+The repository is ready to deploy from GitHub using Docker.
+
+1. Go to https://render.com and connect your GitHub account.
+2. Create a new Web Service and select the `neelmaz/MR_Dashboard` repo.
+3. Render will detect `render.yaml` and use the `Dockerfile` automatically.
+4. Once deployed, Render will give you a public HTTPS URL.
+
+This is the best way to make the FastAPI dashboard accessible outside without running ngrok manually.
