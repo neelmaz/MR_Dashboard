@@ -918,16 +918,15 @@ def render_sidebar_controls(filename: str):
         </div>
         """, unsafe_allow_html=True)
 
-        # Status indicators
-        status_items = [
-            ("Backend API", "🟢 Connected", "success"),
-            ("Data Loading", "🟢 Active", "success"),
-            ("Cache Status", "🟡 Warming", "warning"),
-            ("Memory Usage", "🟢 Normal", "success")
-        ]
+        # Live backend connectivity check
+        try:
+            _r = requests.get(f"{API_BASE_URL}/health", timeout=5)
+            _connected = _r.status_code == 200
+        except Exception:
+            _connected = False
 
-        for item, status, status_type in status_items:
-            st.markdown(f"**{item}:** {status}")
+        st.markdown(f"**Backend URL:** `{API_BASE_URL}`")
+        st.markdown(f"**API Status:** {'🟢 Connected' if _connected else '🔴 Unreachable'}")
 
 
 def render_filters_enterprise(filename: str) -> List[Dict]:
