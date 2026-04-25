@@ -38,5 +38,10 @@ certs/
 *.pptx
 *.pdf
 
+# Exception: dashboard data files must be committed for Render deployment
+!Build_Dashboard/data/*.xlsx
+!Build_Dashboard/data/*.xls
+!Build_Dashboard/data/*.csv
+
 # Explicit ignore for Arabic presentation file
 تقرير استطلاع رأي المتعاملين - يناير 2026 - وزارة الصحة ووقاية المجتمع.pptx
