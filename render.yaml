@@ -1,11 +1,32 @@
 services:
+
+  # ── FastAPI backend ─────────────────────────────────────────────────────────
   - type: web
-    name: mr-dashboard
-    env: docker
-    branch: main
-    dockerfilePath: Dockerfile
+    name: mr-feedback-api
+    env: python
+    rootDir: Build_Dashboard
     region: oregon
     plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+
+  # ── Streamlit frontend ──────────────────────────────────────────────────────
+  - type: web
+    name: mr-feedback-ui
+    env: python
+    rootDir: Build_Dashboard
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: >-
+      streamlit run frontend.py
+      --server.port $PORT
+      --server.address 0.0.0.0
+      --server.headless true
     envVars:
-      - key: PORT
-        value: "10000"
+      - key: API_BASE_URL
+        fromService:
+          name: mr-feedback-api
+          type: web
+          property: url
