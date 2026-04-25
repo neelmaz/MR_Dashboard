@@ -26,7 +26,4 @@ services:
       --server.headless true
     envVars:
       - key: API_BASE_URL
-        fromService:
-          name: mr-feedback-api
-          type: web
-          property: host
+        value: https://mr-feedback-api.onrender.com
