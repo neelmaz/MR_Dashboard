@@ -1,0 +1,15 @@
+Slide 9 - Please update the demographics percentages (i.e. Age group, Gender, Nationality and Current residence of emirates) properly along with the total sample size correctly
+
+Slide 10 - similar update for demographics related to Education level, Social status and nature of employment. Currently many a times are agent are failing to update the figures for these charts correctly. These should clearly come from basic excel tables titled "education level", "occupation" and marital status
+
+Slide 12 - Update the doughnut charts from Feb Summary excel. Copy from respective cells corresponding to Mohap Overall, email, call centres etc.. satisfaction, NPS, sample sizes should be updated. Inspite of clear instructions, you the sample sizes are not updated correctly. While the total sample size is updated correctly, the sample sizes for individual items, that is smart phone application, website etc.. are not updated correctly
+
+Slide 13 - should be updated in same manner from feb summary excel, for Trust and Overall Value
+sample sizes should also be updated appropriately everywhere. As I mentioned for slide 12, for slide 13 also sample sizes for individual items are not updated correctly, please take to update them
+
+Slide 14 - should be updated from February Summary excel, cells labelled as A16 summary (currently placed within Cells T33 to W55) by gender, nationality, age, city for appropriate charts in the slide. Sample sizes should also be updated appropriately. As I mentioned for slide 12, for slide 14 also sample sizes for individual items are not updated correctly, please take to update them
+
+Slide 15 - Comes from Overall Satisfaction (A12+B5+C5) in February basic tables. Reporting figure T2B(Top 2 boxes). The slide needs to be arranged by the statements which have sample sizes more than zero, arranged by descending order of perentages of service statements. For service statements where the percentages are same, then the one with higher sample size should come above. The sample size should be addition of sample size of all the satements with sample greater than zero.
+For slide 15 - also please translate the English statements into Arabic and keep only the Arabic translated statements in the slide after sorted order of English statements have been created for the slide.
+
+For Charts and Graph colors from slide 12 onwards, please note - percentages equal or above 90% color should be green, between 85% to 89% color should be amber and below 85%, color should be red.
