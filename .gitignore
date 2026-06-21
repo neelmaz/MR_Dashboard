@@ -45,3 +45,6 @@ certs/
 
 # Explicit ignore for Arabic presentation file
 تقرير استطلاع رأي المتعاملين - يناير 2026 - وزارة الصحة ووقاية المجتمع.pptx
+
+# report_pipeline delinked from git
+Agent_Framework/report_pipeline/
